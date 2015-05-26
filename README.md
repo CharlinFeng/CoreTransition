@@ -2,16 +2,12 @@
     Charlin出框架的目标：简单、易用、实用、高度封装、绝对解耦！
 
 # CoreTransition
-    push切换）
+    push切换
 <br />
 ####框架特性：<br />
 >1.自用。
 
 <br /><br />
-
-####.效果图片<br />
-![image](./CoreBlurView/1.gif)<br /><br />
-
 
 -----
     CoreTransition push切换
