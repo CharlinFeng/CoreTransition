@@ -204,8 +204,6 @@ static float defaultAnimationTime = 0.33;
                 CGRect maskRect = CGRectMake(location.x-location.x/2, location.y-location.x/2, 0, 0);
                 CGPathRef path = CGPathCreateWithEllipseInRect(maskRect, NULL);
                 maskLayer.path = path;
-        
-                maskLayer.path=path;
                 toViewController.view.layer.mask = maskLayer;
                 CGPathRelease(path);
             };

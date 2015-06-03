@@ -42,7 +42,6 @@ typedef void(^animatorCompletionBlock)();
 #pragma mark - Radial
 @implementation UIView(Radial)
 -(void)radialDissmisWithStartFrame:(CGRect)startFrame duration:(CGFloat)duration andComplitBLock:(void (^)())complBlock{
-    NSLog(@"来？？？");
     CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
     maskLayer.backgroundColor=[UIColor greenColor].CGColor;
     maskLayer.fillRule = kCAFillRuleEvenOdd;
@@ -76,7 +75,7 @@ typedef void(^animatorCompletionBlock)();
     revealAnimation.duration =duration;
     maskLayer.path = p1;
     CGPathRelease(path);
-    
+    revealAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
     Animator * a=[[Animator alloc]initWithLayer:maskLayer andAnimation:revealAnimation];
     
     [a startAnimation:^{
@@ -88,8 +87,6 @@ typedef void(^animatorCompletionBlock)();
     
 }
 -(void)radialAppireanceWithStartFrame:(CGRect)startFrame duration:(CGFloat)duration andComplitBLock:(void(^)())complBlock{
-    
-    NSLog(@"来了");
     
     CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
     CGRect maskRect = startFrame;
@@ -112,7 +109,7 @@ typedef void(^animatorCompletionBlock)();
     revealAnimation.duration =duration;
     maskLayer.path = newPath;
     CGPathRelease(path);
-    
+    revealAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     Animator * a=[[Animator alloc]initWithLayer:maskLayer andAnimation:revealAnimation];
     
     [a startAnimation:^{
