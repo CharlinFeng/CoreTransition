@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		892BCEAD1C0C5CCE008F84A3 /* CALayer+Transition.m in Sources */ = {isa = PBXBuildFile; fileRef = 892BCEAC1C0C5CCE008F84A3 /* CALayer+Transition.m */; };
 		8981B1C21B14BC7B0086358F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8981B1C11B14BC7B0086358F /* main.m */; };
 		8981B1C51B14BC7B0086358F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8981B1C41B14BC7B0086358F /* AppDelegate.m */; };
 		8981B1C81B14BC7B0086358F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8981B1C71B14BC7B0086358F /* ViewController.m */; };
@@ -16,9 +17,6 @@
 		8981B1DC1B14BC7B0086358F /* CoreTransitionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8981B1DB1B14BC7B0086358F /* CoreTransitionTests.m */; };
 		8981B1EE1B14BE480086358F /* MyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8981B1EC1B14BE480086358F /* MyVC.m */; };
 		8981B1EF1B14BE480086358F /* MyVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8981B1ED1B14BE480086358F /* MyVC.xib */; };
-		8981B1F71B14C5880086358F /* AAPTransitionDirector.m in Sources */ = {isa = PBXBuildFile; fileRef = 8981B1F21B14C5880086358F /* AAPTransitionDirector.m */; };
-		8981B1F81B14C5880086358F /* UINavigationController+RadialTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 8981B1F41B14C5880086358F /* UINavigationController+RadialTransaction.m */; };
-		8981B1F91B14C5880086358F /* UIView+Radial.m in Sources */ = {isa = PBXBuildFile; fileRef = 8981B1F61B14C5880086358F /* UIView+Radial.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		892BCEAB1C0C5CCE008F84A3 /* CALayer+Transition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Transition.h"; sourceTree = "<group>"; };
+		892BCEAC1C0C5CCE008F84A3 /* CALayer+Transition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Transition.m"; sourceTree = "<group>"; };
 		8981B1BC1B14BC7B0086358F /* CoreTransition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreTransition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8981B1C01B14BC7B0086358F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8981B1C11B14BC7B0086358F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -48,12 +48,6 @@
 		8981B1EB1B14BE480086358F /* MyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyVC.h; sourceTree = "<group>"; };
 		8981B1EC1B14BE480086358F /* MyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyVC.m; sourceTree = "<group>"; };
 		8981B1ED1B14BE480086358F /* MyVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyVC.xib; sourceTree = "<group>"; };
-		8981B1F11B14C5880086358F /* AAPTransitionDirector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPTransitionDirector.h; sourceTree = "<group>"; };
-		8981B1F21B14C5880086358F /* AAPTransitionDirector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPTransitionDirector.m; sourceTree = "<group>"; };
-		8981B1F31B14C5880086358F /* UINavigationController+RadialTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+RadialTransaction.h"; sourceTree = "<group>"; };
-		8981B1F41B14C5880086358F /* UINavigationController+RadialTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+RadialTransaction.m"; sourceTree = "<group>"; };
-		8981B1F51B14C5880086358F /* UIView+Radial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Radial.h"; sourceTree = "<group>"; };
-		8981B1F61B14C5880086358F /* UIView+Radial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Radial.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,30 +134,10 @@
 		8981B1E51B14BCCF0086358F /* CoreTransition */ = {
 			isa = PBXGroup;
 			children = (
-				8981B1E61B14BCCF0086358F /* Lib */,
+				892BCEAB1C0C5CCE008F84A3 /* CALayer+Transition.h */,
+				892BCEAC1C0C5CCE008F84A3 /* CALayer+Transition.m */,
 			);
 			path = CoreTransition;
-			sourceTree = "<group>";
-		};
-		8981B1E61B14BCCF0086358F /* Lib */ = {
-			isa = PBXGroup;
-			children = (
-				8981B1F01B14C5880086358F /* RadialTransitionSource */,
-			);
-			path = Lib;
-			sourceTree = "<group>";
-		};
-		8981B1F01B14C5880086358F /* RadialTransitionSource */ = {
-			isa = PBXGroup;
-			children = (
-				8981B1F11B14C5880086358F /* AAPTransitionDirector.h */,
-				8981B1F21B14C5880086358F /* AAPTransitionDirector.m */,
-				8981B1F31B14C5880086358F /* UINavigationController+RadialTransaction.h */,
-				8981B1F41B14C5880086358F /* UINavigationController+RadialTransaction.m */,
-				8981B1F51B14C5880086358F /* UIView+Radial.h */,
-				8981B1F61B14C5880086358F /* UIView+Radial.m */,
-			);
-			path = RadialTransitionSource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,9 +243,7 @@
 			files = (
 				8981B1EE1B14BE480086358F /* MyVC.m in Sources */,
 				8981B1C81B14BC7B0086358F /* ViewController.m in Sources */,
-				8981B1F81B14C5880086358F /* UINavigationController+RadialTransaction.m in Sources */,
-				8981B1F91B14C5880086358F /* UIView+Radial.m in Sources */,
-				8981B1F71B14C5880086358F /* AAPTransitionDirector.m in Sources */,
+				892BCEAD1C0C5CCE008F84A3 /* CALayer+Transition.m in Sources */,
 				8981B1C51B14BC7B0086358F /* AppDelegate.m in Sources */,
 				8981B1C21B14BC7B0086358F /* main.m in Sources */,
 			);

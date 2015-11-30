@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import "MyVC.h"
-#import "UINavigationController+RadialTransaction.h"
 
 @interface ViewController ()
 
@@ -34,10 +33,7 @@
     MyVC *myvc = [[MyVC alloc] init];
     
     myvc.popFrame = self.btn.frame;
-    
-    [self.navigationController radialPushViewController:myvc withDuration:1.0f withStartFrame:self.btn.frame comlititionBlock:^{
-        NSLog(@"完成");
-    }];
+
 }
 
 

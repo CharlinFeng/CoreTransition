@@ -7,7 +7,7 @@
 //
 
 #import "MyVC.h"
-#import "UINavigationController+RadialTransaction.h"
+
 
 
 @interface MyVC ()
@@ -27,6 +27,5 @@
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-    [self.navigationController radialPopViewControllerWithDuration:1.0f withStartFrame:self.popFrame comlititionBlock:nil];
 }
 @end
