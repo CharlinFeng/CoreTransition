@@ -72,10 +72,11 @@
  */
 -(NSString *)animaSubtype:(TransitionSubType)subType{
     
+    
     //设置转场动画的方向
     NSArray *subtypes=@[kCATransitionFromTop,kCATransitionFromLeft,kCATransitionFromBottom,kCATransitionFromRight];
     
-    return [self objFromArray:subtypes index:subType isRamdom:(TransitionSubtypesFromRamdom == subType)];
+    return [self objFromArray:subtypes index:subType isRamdom:(TransitionSubtypeRamdom == subType)];
 }
 
 
@@ -85,9 +86,9 @@
  *  返回动画类型
  */
 -(NSString *)animaTypeWithTransitionType:(TransitionAnimType)type{
-    
+
     //设置转场动画的类型
-    NSArray *animArray=@[@"rippleEffect",@"suckEffect",@"pageCurl",@"oglFlip",@"cube",@"reveal",@"pageUnCurl",@"push"];
+    NSArray *animArray=@[@"rippleEffect",@"suckEffect",@"pageCurl",@"oglFlip",@"cube",@"reveal",@"pageUnCurl",@"push",@"TransitionCrossDissolve",kCATransitionFade,kCATransitionMoveIn];
     
     return [self objFromArray:animArray index:type isRamdom:(TransitionAnimTypeRamdom == type)];
 }
@@ -107,5 +108,18 @@
 }
 
 
+
+@end
+
+
+
+
+
+@implementation UIView (Transition)
+
+-(void)transitionWithAnimType:(TransitionAnimType)animType subType:(TransitionSubType)subType curve:(TransitionCurve)curve duration:(CGFloat)duration{
+
+    [self.layer transitionWithAnimType:animType subType:subType curve:curve duration:duration];
+}
 
 @end

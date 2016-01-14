@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "MyVC.h"
+#import "CALayer+Transition.h"
 
 @interface ViewController ()
 
@@ -55,7 +56,14 @@
 
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-    NSLog(@"touchesBegan");
+    
+    
+    MyVC *vc = [[MyVC alloc] init];
+    
+   
+   [self.navigationController pushViewController:vc animated:NO];
+        
+    [self.navigationController.view transitionWithAnimType:TransitionAnimTypeRamdom subType:TransitionSubtypeRamdom curve:TransitionCurveRamdom duration:2];
 }
 
 @end

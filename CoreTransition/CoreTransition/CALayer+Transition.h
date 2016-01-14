@@ -7,6 +7,10 @@
 //
 
 #import <QuartzCore/QuartzCore.h>
+#import <UIKit/UIKit.h>
+
+
+
 
 @interface CALayer (Transition)
 
@@ -30,11 +34,23 @@ typedef enum{
     //正方体
     TransitionAnimTypeCube,
     
-    //push推开
+    //推开
     TransitionAnimTypeReveal,
     
     //合上书本
     TransitionAnimTypePageUnCurl,
+    
+    //溶解
+    TransitionAnimTypePush,
+    
+    //溶解
+    TransitionAnimTypeCrossDissolve,
+    
+    //淡入淡出
+    TransitionAnimTypeFade,
+    
+    //移入
+    TransitionAnimTypeMoveIn,
     
     //随机
     TransitionAnimTypeRamdom,
@@ -50,19 +66,19 @@ typedef enum{
 typedef enum{
     
     //从上
-    TransitionSubtypesFromTop=0,
+    TransitionSubtypeTop=0,
     
     //从左
-    TransitionSubtypesFromLeft,
+    TransitionSubtypeLeft,
     
     //从下
-    TransitionSubtypesFromBotoom,
+    TransitionSubtypeBottom,
     
     //从右
-    TransitionSubtypesFromRight,
+    TransitionSubtypeRight,
     
     //随机
-    TransitionSubtypesFromRamdom,
+    TransitionSubtypeRamdom,
     
 }TransitionSubType;
 
@@ -108,3 +124,16 @@ typedef enum {
 -(CATransition *)transitionWithAnimType:(TransitionAnimType)animType subType:(TransitionSubType)subType curve:(TransitionCurve)curve duration:(CGFloat)duration;
 
 @end
+
+
+
+
+
+
+@interface UIView (Transition)
+
+-(void)transitionWithAnimType:(TransitionAnimType)animType subType:(TransitionSubType)subType curve:(TransitionCurve)curve duration:(CGFloat)duration;
+
+
+@end
+
