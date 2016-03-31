@@ -10,17 +10,13 @@
 #import <UIKit/UIKit.h>
 
 
-
-
-@interface CALayer (Transition)
-
 /*
  *  动画类型
  */
 typedef enum{
     
     //水波
-    TransitionAnimTypeRippleEffect=0,
+    TransitionAnimTypeRippleEffect = 0,
     
     //吸走
     TransitionAnimTypeSuckEffect,
@@ -66,7 +62,7 @@ typedef enum{
 typedef enum{
     
     //从上
-    TransitionSubtypeTop=0,
+    TransitionSubtypeTop = 0,
     
     //从左
     TransitionSubtypeLeft,
@@ -89,7 +85,7 @@ typedef enum{
 typedef enum {
     
     //默认
-    TransitionCurveDefault,
+    TransitionCurveDefault = 0,
     
     //缓进
     TransitionCurveEaseIn,
@@ -107,6 +103,12 @@ typedef enum {
     TransitionCurveRamdom,
     
 }TransitionCurve;
+
+
+
+@interface CALayer (Transition)
+
+
 
 
 
